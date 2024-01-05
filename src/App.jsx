@@ -1,17 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-
 import Header from './Header.jsx';
-
+import * as styles from 'styles/app.module.css';
 const App = () => {
-  return (
-    <div className='container'>
-      <Header/>
-      <div className="container-view">Some activities should be here</div>
-    </div>
-  );
+   return (
+      <div className={styles.container}>
+         <Header />
+         <div className={styles.containerView}> Hello World!</div>
+      </div>
+   );
 };
-
-ReactDOM.render(<App/>, document.getElementById('app'));
 
 export default App;
