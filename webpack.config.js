@@ -3,8 +3,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const InlineChunkHtmlPlugin = require('inline-chunk-html-plugin');
 
-console.log(process.argv);
-var isProd = true;
+const isProd = process.argv[process.argv.findIndex((v) => v === '--mode') + 1] === 'production';
 module.exports = {
    module: {
       rules: [
